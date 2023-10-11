@@ -1,0 +1,14 @@
+{
+    "package": "react-native-ui-devkit",
+    "name": "React Native UI DevKit",
+    "description": "Native UI Development Kit for React Native",
+    "version": "1.0.0",
+    "theme": "auto",
+    "native": {
+        "backgroundColor": "both"
+    },
+    "license": {
+        "android": "U2FsdGVkX1/pKBxMhiGwgECWcInHoi3+I5qHnjUGdaLpp+bBZDDjEdM6Di9k4K6Aq4L0jLqq1mFbCxtR5U2XuJ5YLSKAdzmPiEL9gQhtSLfugNWgcWlf3UTnRMYZjB7jnlyUKp9HQE7MKRkFbyj0w7C/Vxi9HkgGUxwqwed2zfO646MgaMHzRTr27FjZOHgJRDiKzDCIAEd7oZkEqN/rS3Z+JRNVTxVIT7vJnLi4IvYG44xmfslUa9ynp8svcUnOKjayk6ltnIiHpa95j3qMLw",
+        "ios": "U2FsdGVkX19+lN6txBeOQpfKRp2k/rKnu3LvFhlhrhc2jYzzd8H4+89rNlw8VBs/7duFaKe6HnRXAjUvPFyo0vDVtA94dBQXJ1B7fdO/W3bdV+KrLG7bE4vdExa/bX6v5e6iJpSonUHeSCniMRYhn6rRziDi+bBPEZQTvZ/lRkbAQHHdgENBahVWFp5YEi62BKRTfOGmpC7yGoEYUQLNJwcKfhuuNGcNGG7lDCXEnP6OJmrPi/ra3YdXOi43YU8M41qWZdgCD24pZh4w1usujA"
+    }
+}
