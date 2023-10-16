@@ -9,7 +9,7 @@ Before you get started with our React Native UI DevKit package, we'll provide a 
 
 ## What is React Native UI DevKit?
 
-React Native UI DevKit is a component library developed with the Native-style concept that delivers a native interface for each platform.
+React Native UI DevKit is a free component library developed with the Native-style concept that delivers a native interface for each platform.
 
 <p align="center">
   <a href="https://reactnativeuidevkit.com/">
