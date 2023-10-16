@@ -169,32 +169,6 @@ See here all the features that the React Native UI DevKit has.
 -  [androidOldVersion()](https://reactnativeuidevkit.com/docs/Functions/androidOldVersion)
 -  [iosOldVersion()](https://reactnativeuidevkit.com/docs/Functions/iosOldVersion)
 
-## Library
-
-The React Native UI DevKit Library is a project that covers the use of all components of the package in addition to the light and dark theme. You can use it to check the behavior of each component in the real world and facilitate implementation in your projects.
-
-### Instalation
-```bash
- git clone https://github.com/reactnativeuidevkit/react-native-ui-devkit-library.git
-```
-
-```bash npm2yarn
- npm install
-```
-
-If you're on a Mac and developing for iOS, you need to install the pods [(via Cocoapods)](https://cocoapods.org/) to complete the linking.
-```bash 
- cd ios && pod install
-```
-
-Let the games begin,
-
-```bash
- npx react-native run-android
-```
-
-Have a fun
-
 ## Continuous Innovation
 
 The React Native UI DevKit continuous innovation protocol is constantly evolving through research and development. It consists of two steps: the first is the analysis of the Android and iOS platforms and their versions and updates, to test and deploy the latest updates. The second is our testing ground to validate new features and improvements before they are implemented in the React Native UI DevKit package update.
