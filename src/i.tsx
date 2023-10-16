@@ -8,7 +8,6 @@ import { useTheme } from '@react-navigation/native';
 import { SFSymbol } from "react-native-sfsymbols";
 import { type IIcon } from './types';
 import { Badge } from "./b";
-import { wrn } from "./w";
 import * as Animatable from 'react-native-animatable';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -61,9 +60,6 @@ const ZocialAnimatedIcon = Animatable.createAnimatableComponent(Zocial);
 const SFSymbolAnimatedIcon = Animated.createAnimatedComponent(SFSymbol);
 const colors = useTheme().colors;
 const ss = s();
-if (ss == null) {
-return wrn();
-}
 let icon = /*#__PURE__*/React.createElement(View, null);
 if (Platform.OS == 'android' && native) {
 if (Platform.Version == 25) {

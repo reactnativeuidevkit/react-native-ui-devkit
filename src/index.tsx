@@ -2,15 +2,6 @@
 * MIT License
 * Copyright © 2023 React Native UI DevKit - All rights reserved
 */
-
-/*
-* CONFIGURATION FILE
-*/
-import config from "../../../rn-ui-devkit-config.json";
-/* 
-* Missing React Native UI DevKit configuration file: It looks like you are facing an issue with the missing configuration file in the root of your app. To resolve this issue, see the documentation.
-*/
-
 import React, { useState, useImperativeHandle, forwardRef, Fragment, useRef, useEffect, createContext, useContext } from "react";
 import { Animated, View, Text, Platform, LayoutAnimation, Dimensions, Appearance, PlatformColor } from "react-native";
 import { MarginTop, MarginBottom, MarginHorizontal, PaddingTop, PaddingBottom, PaddingHorizontal, BorderRadius, TitleFontSize, MediumFontSize, DescriptionFontSize } from "./s";
@@ -20,7 +11,6 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { isTablet } from "react-native-device-info";
 import { render, button, iconButton } from "./r";
 import { Icon } from "./i";
-import { wrn } from "./w";
 import ReactNativeHapticFeedback from "react-native-haptic-feedback";
 import s from "./s";
 import h from "./h";
@@ -35,7 +25,8 @@ RNUIDevKitContext.displayName = 'RNUIDevKitProvider';
 const RNUIDevKitProvider = (_ref:IRNUIDevKitProvider) => {
 let {
 children,
-dark
+theme = 'auto',
+backgroundColor = 'both'
 } = _ref;
 const defaultTheme = DefaultTheme.colors;
 const darkTheme = DarkTheme.colors;
@@ -50,17 +41,17 @@ colors.dark = {
 ...darkTheme
 };
 }
-if (Appearance.getColorScheme() == 'light' && config.theme == 'auto' && dark == null || config.theme == 'light' || config.theme == 'auto' && dark == false) {
-if (config.native?.backgroundColor == 'both') {
+if (Appearance.getColorScheme() == 'light' && theme == 'auto' || theme == 'light' || theme == 'auto') {
+if (backgroundColor == 'both') {
 colors.background = Platform.OS == 'ios' ? !IosOldVersion() ? '#F2F1F6' : '#F0EFF5' : AndroidOldVersion() ? '#FAFAFA' : '#F3F3F3';
 }
-if (config.native?.backgroundColor == 'android' && Platform.OS == 'android') {
+if (backgroundColor == 'android' && Platform.OS == 'android') {
 colors.background = AndroidOldVersion() ? '#FAFAFA' : '#F3F3F3';
 }
-if (config.native?.backgroundColor == 'ios' && Platform.OS == 'ios') {
+if (backgroundColor == 'ios' && Platform.OS == 'ios') {
 colors.background = !IosOldVersion() ? '#F2F1F6' : '#F0EFF5';
 }
-if (config.native?.backgroundColor == 'none' || config.native?.backgroundColor == 'android' && Platform.OS == 'ios' || config.native?.backgroundColor == 'ios' && Platform.OS == 'android') {
+if (backgroundColor == 'none' || backgroundColor == 'android' && Platform.OS == 'ios' || backgroundColor == 'ios' && Platform.OS == 'android') {
 colors.background = colors.default?.background;
 }
 if (colors.default?.card) {
@@ -89,17 +80,17 @@ underlay: '#FFFFFF',
 line: '#e0e0e0',
 selected: '#e0e0e0'
 };
-} else if (Appearance.getColorScheme() == 'dark' && config.theme == 'auto' || config.theme == 'dark' || dark) {
-if (config.native?.backgroundColor == 'both') {
+} else if (Appearance.getColorScheme() == 'dark' && theme == 'auto' || theme == 'dark') {
+if (backgroundColor == 'both') {
 colors.background = Platform.OS == 'ios' ? '#000000' : AndroidOldVersion() ? '#171717' : '#010101';
 }
-if (config.native?.backgroundColor == 'android' && Platform.OS == 'android') {
+if (backgroundColor == 'android' && Platform.OS == 'android') {
 colors.background = AndroidOldVersion() ? '#171717' : '#010101';
 }
-if (config.native?.backgroundColor == 'ios' && Platform.OS == 'ios') {
+if (backgroundColor == 'ios' && Platform.OS == 'ios') {
 colors.background = '#000000';
 }
-if (config.native?.backgroundColor == 'none' || config.native?.backgroundColor == 'android' && Platform.OS == 'ios' || config.native?.backgroundColor == 'ios' && Platform.OS == 'android') {
+if (backgroundColor == 'none' || backgroundColor == 'android' && Platform.OS == 'ios' || backgroundColor == 'ios' && Platform.OS == 'android') {
 colors.background = colors.dark?.background;
 }
 if (colors.dark?.card) {
@@ -131,7 +122,8 @@ selected: '#303030'
 }
 return /*#__PURE__*/React.createElement(RNUIDevKitContext.Provider, {
 value: {
-dark
+theme,
+backgroundColor
 }
 }, /*#__PURE__*/React.createElement(GestureHandlerRootView, {
 style: {
@@ -191,9 +183,6 @@ const {
 colors
 } = useTheme();
 const ss = s(tabletIpadMenuType, expanded, colors);
-if (ss == null) {
-return wrn();
-}
 const [pressed, setPressed] = useState(null);
 const [hidden] = useState(false);
 const [motiStage] = useState(0);
@@ -250,9 +239,6 @@ const {
 colors
 } = useTheme();
 const ss = s(tabletIpadMenuType, expanded);
-if (ss == null) {
-return wrn();
-}
 const [pressed, setPressed] = useState(null);
 const [checkedItem, setCheckedItem] = useState();
 const [checkedValue, setCheckedValue] = useState(false);
@@ -363,9 +349,6 @@ const {
 colors
 } = useTheme();
 const ss = s();
-if (ss == null) {
-return wrn();
-}
 const [pressed, setPressed] = useState(null);
 return data && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(Animated.View, {
 style: [ss?.groupMarginTop, (!marginTop || icon) && {
@@ -385,9 +368,6 @@ style: ss?.footerButton
 });
 const Divider = /*#__PURE__*/React.memo(() => {
 const ss = s();
-if (ss == null) {
-return wrn();
-}
 return /*#__PURE__*/React.createElement(View, {
 style: ss?.dividerView
 });
@@ -402,9 +382,6 @@ tabletIpadMenuType
 } = _ref5;
 const colors = useTheme().colors;
 const ss = s(tabletIpadMenuType, expanded);
-if (ss == null) {
-return wrn();
-}
 return !AndroidOldVersion() && /*#__PURE__*/React.createElement(View, {
 style: ss?.separatorRoot
 }, /*#__PURE__*/React.createElement(View, {

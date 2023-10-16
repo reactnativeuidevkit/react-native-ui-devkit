@@ -40,11 +40,17 @@ export interface IRNUIDevKitProvider {
  */
 children: ReactNode,
 /**
- * Set to theme dark, true or false.
+ * Set to theme auto, light or dark.
  * 
- * Default is null, system theme.
+ * Default is auto, system theme.
  */
-dark?: null | true | false
+theme?: 'auto' | 'light' | 'dark',
+/**
+ * Set system background color.
+ * 
+ * Default is both, system background color.
+ */
+backgroundColor?: 'both' | 'android' | 'ios' | 'none'
 }
 
 /**

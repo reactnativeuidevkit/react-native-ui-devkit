@@ -51,28 +51,6 @@ If you're on a Mac and developing for iOS, you need to install the pods [(via Co
  cd ios && pod install
 ```
 
-### Configuration file
-
-Free use for those who distribute their apps outside of the Google Play or App Store, just follow the steps to configure it in your app, no need to purchase a license, just use your bundle ID like `com.rn.ui.devkit` and copy and paste the React Native UI DevKit configuration below which should be in the root of your project as <a target="_blank" href='/rn-ui-devkit-config.json' download>`rn-ui-devkit-config.json`</a>.
-
-> For those who intend to distribute their applications on the Google Play or App Store, it is necessary to purchase a single license, visit the React Native UI DevKit website at <a target="_blank" href='https://reactnativeuidevkit.com'>https://reactnativeuidevkit.com</a>
-
-```json
-{
-    "name": "react-native-ui-devkit",
-    "description": "Native UI Development Kit for React Native",
-    "version": "1.0.0",
-    "theme": "auto",
-    "native": {
-      "backgroundColor": true
-    },
-    "license": {
-        "android": "U2FsdGVkX1/pKBxMhiGwgECWcInHoi3+I5qHnjUGdaLpp+bBZDDjEdM6Di9k4K6Aq4L0jLqq1mFbCxtR5U2XuJ5YLSKAdzmPiEL9gQhtSLfugNWgcWlf3UTnRMYZjB7jnlyUKp9HQE7MKRkFbyj0w7C/Vxi9HkgGUxwqwed2zfO646MgaMHzRTr27FjZOHgJRDiKzDCIAEd7oZkEqN/rS3Z+JRNVTxVIT7vJnLi4IvYG44xmfslUa9ynp8svcUnOKjayk6ltnIiHpa95j3qMLw",
-        "ios": "U2FsdGVkX19+lN6txBeOQpfKRp2k/rKnu3LvFhlhrhc2jYzzd8H4+89rNlw8VBs/7duFaKe6HnRXAjUvPFyo0vDVtA94dBQXJ1B7fdO/W3bdV+KrLG7bE4vdExa/bX6v5e6iJpSonUHeSCniMRYhn6rRziDi+bBPEZQTvZ/lRkbAQHHdgENBahVWFp5YEi62BKRTfOGmpC7yGoEYUQLNJwcKfhuuNGcNGG7lDCXEnP6OJmrPi/ra3YdXOi43YU8M41qWZdgCD24pZh4w1usujA"
-    }
-}
-```
-
 ### Provider
 
 The provider has to be imported and has to wrap its routes due to Native-style and light and dark modes.
@@ -94,7 +72,7 @@ const App = () => {
   }
 
   return (
-    <RNUIDevKitProvider dark={null}>
+    <RNUIDevKitProvider theme={'auto'} backgroundColor={'both'} >
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Component" component={Component} />
