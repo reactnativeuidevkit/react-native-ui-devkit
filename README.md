@@ -11,6 +11,8 @@ Before you get started with our React Native UI DevKit package, we'll provide a 
 
 React Native UI DevKit is a free component library developed with the Native-style concept that delivers a native interface for each platform.
 
+> Action, Button, Card, Checkbox, Collapsible, Divider, FlatList, Icon, Item, List, Radio, Separator, Swipeable (iOS), Switch, TextInput
+
 <p align="center">
   <a href="https://reactnativeuidevkit.com/">
     <img alt="React Native UI DevKit Devices" src="static/img/devices.png" width="auto">
