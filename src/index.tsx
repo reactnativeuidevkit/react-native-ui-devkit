@@ -41,7 +41,7 @@ colors.dark = {
 ...darkTheme
 };
 }
-if (Appearance.getColorScheme() == 'light' && theme == 'auto' || theme == 'light' || theme == 'auto') {
+if ((Appearance.getColorScheme() == 'light' && theme == 'auto') || theme == 'light') {
 if (backgroundColor == 'both') {
 colors.background = Platform.OS == 'ios' ? !IosOldVersion() ? '#F2F1F6' : '#F0EFF5' : AndroidOldVersion() ? '#FAFAFA' : '#F3F3F3';
 }
@@ -80,7 +80,7 @@ underlay: '#FFFFFF',
 line: '#e0e0e0',
 selected: '#e0e0e0'
 };
-} else if (Appearance.getColorScheme() == 'dark' && theme == 'auto' || theme == 'dark') {
+} else if ((Appearance.getColorScheme() == 'dark' && theme == 'auto') || theme == 'dark') {
 if (backgroundColor == 'both') {
 colors.background = Platform.OS == 'ios' ? '#000000' : AndroidOldVersion() ? '#171717' : '#010101';
 }
