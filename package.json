@@ -1,6 +1,6 @@
 {
   "name": "react-native-ui-devkit",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Native UI Development Kit for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -129,18 +129,21 @@
     "moti"
   ],
   "dependencies": {
-    "@react-navigation/native": "^6.1.7",
     "moti": "^0.26.0",
-    "react-native-animatable": "^1.3.3",
-    "react-native-device-info": "^10.11.0",
-    "react-native-gesture-handler": "^2.13.1",
-    "react-native-haptic-feedback": "^2.2.0",
-    "react-native-iphone-screen-helper": "^2.0.3",
-    "react-native-sfsymbols": "^1.2.1"
+    "react-native-animatable": "^1.3.3"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "@react-navigation/native": "*",
+    "react-native-animatable": "*",
+    "react-native-device-info": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-haptic-feedback": "*",
+    "react-native-iphone-screen-helper": "*",
+    "react-native-sfsymbols": "*",
+    "react-native-vector-icons": "*",
+    "react-native-reanimated": "*"
   },
   "engines": {
     "node": ">= 18.0.0"
