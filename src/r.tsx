@@ -341,7 +341,7 @@ size: 22,
 style: {
 marginLeft: 10
 }
-}), item.switch && item.checkbox == null && item.radio == null && item.collapsible == null && (item.action?.iOS == null || item.action?.iOS == false) && /*#__PURE__*/React.createElement(View, {
+}), item.switch && item.checkbox == null && item.radio == null && item.collapsible == null && /*#__PURE__*/React.createElement(View, {
 style: {
 height: 29,
 justifyContent: 'center',
