@@ -145,6 +145,7 @@ text: context?.colors?.text,
 secondary: context?.colors?.secondary,
 tertiary: context?.colors?.tertiary,
 button: context?.colors?.button,
+tabbar: context?.colors?.tabbar,
 ios: {
 headerBackground: context.colors?.ios?.headerBackground,
 item: context.colors?.ios?.item,
