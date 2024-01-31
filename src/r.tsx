@@ -764,14 +764,14 @@ disabled: item?.loading || item.disabled || !item.onPress
 }), /*#__PURE__*/React.createElement(View, {
 style: [styles?.item, {
 backgroundColor: bgColor,
-borderRadius: Platform.OS == 'ios' ? 10 : 25
+borderRadius: Platform.OS == 'ios' ? 14 : 25
 }, small && {
 minHeight: Platform.OS == 'ios' ? h.getIosOldVersion() ? 36 : 34 : 30
 }, small && {
 paddingTop: 0,
 paddingBottom: 0
 }, !small && !item.component && {
-height: Platform.OS == 'ios' ? 44 : 53
+height: Platform.OS == 'ios' ? h.getIosOldVersion() ? 44 : 49 : 53
 }, i == pressed && {
 backgroundColor: backgroundColorPressed,
 opacity
