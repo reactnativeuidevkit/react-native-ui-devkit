@@ -30,7 +30,7 @@ backgroundColor = 'both'
 } = _ref;
 const defaultTheme = DefaultTheme.colors;
 const darkTheme = DarkTheme.colors;
-let colors = useTheme().colors;
+let colors = DefaultTheme.colors;
 if (colors.default == null) {
 colors.default = {
 ...defaultTheme
@@ -381,7 +381,7 @@ end,
 expanded,
 tabletIpadMenuType
 } = _ref5;
-const colors = useTheme().colors;
+const colors = DefaultTheme.colors;
 const ss = s(tabletIpadMenuType, expanded);
 return !AndroidOldVersion() && /*#__PURE__*/React.createElement(View, {
 style: ss?.separatorRoot
